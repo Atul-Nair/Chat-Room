@@ -1,0 +1,174 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.app{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+.screen{
+    display: none;
+}
+
+.screen.active{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    max-width: 400px;
+}
+
+.form-input{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.screen h2{
+    margin-bottom: 25px;
+    font-size: 35px;
+    color: #354259;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.form-input label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+#username{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#join-user{
+    padding: 10px 20px;
+    background: #354259;
+    color: #eee;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.header{
+    background: #354259;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.logo{
+    font-size: 18px;
+    color: #eee;
+    font-weight: 600;
+}
+
+#exit-chat{
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    background: transparent;
+    color: #eee;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+
+.chat-screen .messages{
+    width: 100%;
+    height: calc(100% - 100px);
+    background: #f5f5f5;
+    overflow: auto;
+
+}
+
+.message{
+    display: flex;
+    padding: 10px;
+}
+
+.message > div {
+    max-width: 80%;
+    background: #A1CAE2;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message.my-message{
+    justify-content: flex-end;
+}
+
+.message.other-message{
+    justify-content: flex-start;
+}
+
+.message .name{
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.message .text{
+    word-wrap: break-word;
+}
+
+.messages .update{
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}
+
+.typebox{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+#message-input{
+    flex: 1;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#send-message{
+    width: 80px;
+    height: 100%;
+    background: #354259;
+    color: #eee;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
